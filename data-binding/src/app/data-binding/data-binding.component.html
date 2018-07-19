@@ -1,4 +1,4 @@
-<section class="property-binding">
+<!--section class="property-binding">
 
   <!--article>
     <h3>Interpolation / Interpolação</h3>
@@ -15,7 +15,7 @@
     <img bind-src="urlImagem">
   </article-->
 
-  <article>
+  <!--article>
     <h3>Class e Style Binding</h3>
     <div>
       Selecione uma classe
@@ -28,7 +28,7 @@
       <br><br>
 
       <!-- class binding -->
-      <div class="alert {{ classe.value }}" role="alert">
+      <!--div class="alert {{ classe.value }}" role="alert">
         Texto colorido conforme valor do comboBox.
       </div>
 
@@ -46,9 +46,35 @@
       </div>
 
       <!-- style binding -->
-      <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+      <!--div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
           Este texto somente aparece em caso de erro.
       </div>
+    </div>
+  </article>
+</section-->
+
+<section class="event-binding">
+  <article>
+    <h3>Event Binding</h3>
+    <div>
+      <button (click)="botaoClicado()" class="btn btn-primary">
+        Me clique!
+      </button>
+      <br><br>
+      <input type="text" #campoInput
+        (keyup)="onKeyUp($event)" 
+        (keyup.enter)="salvarValor($event.target.value)"
+        (blur)="salvarValor(campoInput.value)"/>
+
+      <p>Valor atual: {{ valorAtual }}</p>
+      <p>Valor salvo: {{ valorSalvo }}</p>
+
+      <br>
+      <span [class.highlight]="isMouseOver"
+        (mouseover)="onMouseOverOut()"
+        (mouseout)="onMouseOverOut()">
+        Passe o mouse sobre mim
+      </span>
     </div>
   </article>
 </section>
