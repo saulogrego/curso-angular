@@ -79,7 +79,7 @@
   </article>
 </section-->
 
-<section class="two-way-binding">
+<!--section class="two-way-binding">
   <article>
     <h3>Two-way Data Binding</h3>
     <div>
@@ -96,7 +96,7 @@
       <br>
       <input type="text" [(ngModel)]="nome"/> <!--two way data binding-->
 
-      <p>Você digitou o nome {{ nome }}</p>
+      <!--p>Você digitou o nome {{ nome }}</p>
 
       <div>
         <p>Meu nome é {{pessoa.nome}} e tenho {{pessoa.idade}} anos de idade.</p>
@@ -105,4 +105,12 @@
       </div>
     </div>
   </article>
+</section-->
+
+<section class="input-output-properties">
+  <article>
+    <h3>Input/Output Properties</h3>
+
+    <app-curso [nome]="nomeDoCurso"></app-curso>
+    </article>
 </section>

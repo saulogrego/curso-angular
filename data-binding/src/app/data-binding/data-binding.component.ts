@@ -8,16 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class DataBindingComponent implements OnInit {
 
   url: string = "http://loiane.com";
+
   cursoAngular: boolean = true;
+
   urlImagem = "http://lorempixel.com/400/200/nature";
+
   valorAtual: string = '';
   valorSalvo: string= '';
+
   isMouseOver: boolean = false;
+
   nome: string = 'abc';
   pessoa: any = {
     nome: 'def',
     idade: 18
   }
+
+  nomeDoCurso: string = 'Angular';
 
   getValor(){
     return 1;
